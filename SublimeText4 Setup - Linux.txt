@@ -9,7 +9,7 @@ SublimeText:
 https://www.sublimetext.com/docs/linux_repositories.html
 
 pip3:
-apt install python3-pip
+sudo apt install python3-pip
 # Note: just install packages as root so they go in /usr/local/bin/
 
 
@@ -24,14 +24,14 @@ Preferences -> Select Color Scheme... -> Monokai
 Preferences -> Package Control: Install Package
 	SublimeLinter
 	SublimeLinter-pyflakes
-		pip3 install pyflakes
+		sudo pip3 install pyflakes
 	SublimeLinter-pycodestyle
-		pip3 install pycodestyle
+		sudo pip3 install pycodestyle
 	Jedi - Python autocompletion
 	SublimeLinter-shellcheck
-		apt install shellcheck
+		sudo apt install shellcheck
 	SublimeLinter-mypy
-		pip3 install mypy
+		sudo pip3 install mypy
 	Generic Config
 	Compare Side-By-Side
 
