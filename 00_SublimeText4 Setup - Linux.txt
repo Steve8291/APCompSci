@@ -1,0 +1,56 @@
+Sublime Text4 Setup Proceedure (Linux)
+
+
+Firefox:
+Settings -> Privacy & Security -> Certificates -> View Certificates -> Import -> ContentKeeperApplianceCA
+Trust to identify websites and email users
+
+SublimeText:
+https://www.sublimetext.com/docs/linux_repositories.html
+
+pip3:
+sudo apt install python3-pip
+# Note: just install packages as root so they go in /usr/local/bin/
+
+
+
+Tools -> Install Package Control
+
+View -> Hide Minimap
+View -> Side Bar -> Show Open Files
+
+Preferences -> Select Color Scheme... -> Monokai
+
+Preferences -> Package Control: Install Package
+	SublimeLinter
+	SublimeLinter-pyflakes
+		sudo pip3 install pyflakes
+	SublimeLinter-pycodestyle
+		sudo pip3 install pycodestyle
+	Jedi - Python autocompletion
+	SublimeLinter-shellcheck
+		sudo apt install shellcheck
+	SublimeLinter-mypy
+		sudo pip3 install mypy
+	Generic Config
+	Compare Side-By-Side
+
+
+Preferences -> Package Settings -> SublimeLinter -> Settings
+{
+	// "debug": true,
+	
+	"linters": {
+		"pycodestyle": {
+			"ignore": ["E501"],
+		}
+	}
+}
+
+
+
+### Install Juypter Notebook ###
+pip3 install notebook
+pip3 install bash_kernel
+python3 -m bash_kernel.install
+
