@@ -1,0 +1,26 @@
+ BIOS & Ubuntu Install/Upgrade
+
+    Turn on computers
+    Remove BIOS password:
+        Remove jumper and reboot
+    Enter BIOS "F2" and make settings (refer to manual)
+        General -> Boot Sequence -> UEFI (note if there are problems with install, temporarily switch to "Legacy"
+        System Configuration -> SATA Operation -> ACHI (this is the only way to disable RST which Ubuntu requires)
+        System Configuration -> Smart Reporting -> Enable
+    Install Ubuntu from jump drives:
+        LTS version Ubuntu: https://ubuntu.com/download/desktop
+        Create usb boot disk with balenaEtcher
+    Update Computer firmware & BIOS
+        https://fwupd.org/
+        fwupdmgr get-devices (List devices with fwupd support)
+        fwupdmgr refresh (Download fwupd metadata)
+        fwupdmgr get-updates (List devices with fwupd sup)
+        fwupdmgr update (Update devices)
+    Update Ubuntu:
+        sudo apt update && apt upgrade
+        sudo snap refresh
+    Possibly update firmware on SSD (requires Windows app Western Digital Dashboard)
+    Tweaking Ubuntu:
+        Add Terminal to Bookmarks bar
+        Auto hide bookmarks bar
+        Getting around inside Ubuntu
