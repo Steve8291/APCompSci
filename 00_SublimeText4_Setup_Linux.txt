@@ -48,6 +48,13 @@ Preferences -> Package Settings -> SublimeLinter -> Settings
 }
 
 
+Open a new file in SublimeText and select 'Python' as the file type (bottom right corner)
+Preferences -> Settings - Syntax Specific
+{
+	"translate_tabs_to_spaces": true,
+}
+
+
 
 ### Install Juypter Notebook ###
 pip3 install notebook

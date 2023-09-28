@@ -1,11 +1,13 @@
 import time
 
 
-y = 0
-while y <= 5:
-    print(y)
-    y += 1
-print(f"y is equal to {y}")
+num = 0
+while num <= 5 or num > 20:
+    print(f"num = {num}")
+    num += 1
+
+print(f"The final value of num = {num}")
+
 
 choice = "No"
 while choice != 'Yes':
