@@ -84,6 +84,7 @@ if isinstance(variable, int):
 else:
     print(f"The variable was not an int, it was a: {type(variable)}")
 
+
 print("\n________ Test Variable is in List ________")
 variable = "no"
 if variable in ['no', 'not', 'nope', 'never']:
