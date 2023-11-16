@@ -1,0 +1,36 @@
+# Python Naming Conventions:
+
+function and variable names: lowercase with underscores
+
+Bool:
+	is_ 	(if variable or object is in said state)
+	has_  	(if object has some attribute)
+
+
+
+
+
+Modify object: Likely does not return a value
+	set_
+	new_
+	prepend_
+	append_
+	update_
+	del_
+	insert_
+	replace_
+	add_
+	do_
+	edit_
+	make_
+	calc_		(calculation)
+	run_
+	send_
+	report_
+	create_
+
+Return int, float, string, etc.:
+	find_   	(may fail and could take longer to return)
+	get_    	(should not fail, returns simple value)
+	fetch_  	(return large amount of data, possibly from external source. may fail)
+	retrieve_	(similar to fetch_)
