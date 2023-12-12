@@ -5,6 +5,10 @@ Firefox:
 Settings -> Privacy & Security -> Certificates -> View Certificates -> Import -> ContentKeeperApplianceCA
 Trust to identify websites and email users
 
+RootCert for Terminal:
+sudo wget -P /usr/local/share/ca-certificates/ https://ckr01.bcsc.k12.in.us/ckroot/ckroot.crt
+sudo update-ca-certificates
+
 SublimeText:
 https://www.sublimetext.com/docs/linux_repositories.html
 
@@ -61,3 +65,5 @@ pip3 install notebook
 pip3 install bash_kernel
 python3 -m bash_kernel.install
 
+## Other Packages We Will Use ##
+sudo apt install libimage-exiftool-perl
