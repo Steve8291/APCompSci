@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 
 import tkinter
-import serial  # type: ignore[import]
+import serial
 
 # Requires tkinter and pyserial
 # sudo pip3 install pyserial
+# sudo pip3 install types-pyserial
 # sudo apt install python3-tk
 
 com_port = '/dev/cu.usbmodem141224301'  # Check Arduino IDE for port
