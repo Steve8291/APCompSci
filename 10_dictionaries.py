@@ -46,3 +46,34 @@ print("\n________ Delete Item From Dict ________")
 if "year" in car_dict:
     del car_dict['year']
 print(car_dict)
+
+
+print("\n________ Nested Dictionaries ________")
+# These are dictionaries that contain dictionaries!
+academic_schools = {
+    "Indiana University": {
+        "cost": 20000,
+        "location": "Bloomington, Indiana",
+        "degrees": ("Computer Science", "Business", "Geology"),
+        "gpa": 3.0,
+        "sat_score": 1000
+    },
+    "MIT": {
+        "cost": 50000,
+        "location": "Cambridge, MA",
+        "degrees": ("Computer Science", "Botany", "Paleontology"),
+        "gpa": 4.0,
+        "sat_score": 1500
+    }
+}
+
+print("\n__Print MIT gpa:")
+print(academic_schools["MIT"]["gpa"])
+
+print("\n__Print degrees list from MIT:")
+for i in academic_schools["MIT"]["degrees"]:
+    print(i)
+
+print("\n__Print List of Keys:")
+for i in academic_schools.keys():
+    print(i)
