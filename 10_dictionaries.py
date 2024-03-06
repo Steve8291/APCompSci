@@ -77,3 +77,8 @@ for i in academic_schools["MIT"]["degrees"]:
 print("\n__Print List of Keys:")
 for i in academic_schools.keys():
     print(i)
+
+print("\n__Print key value pairs:")
+for key, value in academic_schools.items():
+    print(key, value)
+
