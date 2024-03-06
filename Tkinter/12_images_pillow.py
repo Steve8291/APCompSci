@@ -21,9 +21,9 @@ frame.grid()
 # Create an object of tkinter ImageTk
 # You will need to resize your image using an app like Gimp
 # to make it the size you want.
-img = ImageTk.PhotoImage(Image.open("./AppetizerWreath.jpg"))
-img2 = ImageTk.PhotoImage(Image.open("./forest.jpg"))
-img3 = ImageTk.PhotoImage(Image.open("./BaconAppetizers.jpg"))
+img = ImageTk.PhotoImage(Image.open("./12_assets/AppetizerWreath.jpg"))
+img2 = ImageTk.PhotoImage(Image.open("./12_assets/forest.jpg"))
+img3 = ImageTk.PhotoImage(Image.open("./12_assets/BaconAppetizers.jpg"))
 
 # Create a Label Widget to display the Image
 label = ttk.Label(frame, image=img)
