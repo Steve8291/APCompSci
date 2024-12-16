@@ -28,7 +28,8 @@ frame.grid()
 # Create an object of tkinter ImageTk
 # You will need to resize your image using an app like Gimp
 # to make it the size you want.
-img = ImageTk.PhotoImage(Image.open("./12_assets/AppetizerWreath.jpg"))
+img = tk.PhotoImage(file="./12_assets/AppetizerWreath.png")
+# img = ImageTk.PhotoImage(Image.open("./12_assets/AppetizerWreath.jpg"))
 img2 = ImageTk.PhotoImage(Image.open("./12_assets/forest.jpg"))
 img3 = ImageTk.PhotoImage(Image.open("./12_assets/BaconAppetizers.jpg"))
 
