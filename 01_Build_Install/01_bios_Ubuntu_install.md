@@ -1,0 +1,66 @@
+# BIOS & Ubuntu Install
+- Remove BIOS password if necessary by removing the jumper and rebooting
+- Enter BIOS
+    - BIOS/System Setup: `F2` or `Del`
+    - Boot Menu: `F12`
+- Make the following changes in BIOS:
+    - General -> Boot Sequence -> UEFI (note if there are problems with install, temporarily switch to "Legacy")
+    - Date/Time (set the date and time)
+    - System Configuration -> SATA Operation -> ACHI (this is the only way to disable RST which Ubuntu requires)
+    - System Configuration -> Smart Reporting -> Enable
+
+- Insert jump drive, enter boot menu and install Ubuntu
+
+Note: if the computer fails to boot the next time you poweroff it might have reverted back to Legacy mode in the BIOS. This is likely due to a dead CMOS battery on the motherboard. A good battery will test >= 2.8V
+
+# Ubuntu Noble Numbat 24.04 Notes
+
+## Firmware Updates
+[Linux Vendor Firmware Service](https://fwupd.org/)
+```bash
+fwupdmgr get-devices # List devices with fwupd support
+fwupdmgr refresh # Download fwupd metadata
+fwupdmgr get-updates
+```
+
+## Update Ubuntu:
+```bash
+sudo apt update && apt upgrade
+sudo snap refresh
+```
+
+## Install Apps
+```bash
+sudo apt install plocate
+
+sudo snap install opera
+```
+
+## UI Tweaks
+- Getting around inside Ubuntu
+- Add Terminal to Bookmarks bar
+- Auto hide bookmarks bar
+- System Settings -> Appearance -> Style -> Dark
+- System Settings -> Ubuntu Desktop -> Dock -> Auto-hide the Dock
+
+## Firewall
+```bash
+sudo ufw enable
+```
+
+## Enable Source Highlighting in `less`
+```bash
+sudo apt install source-highlight
+echo 'export LESSOPEN="| /usr/share/source-highlight/src-hilite-lesspipe.sh %s"' >> /home/<username>/.bashrc
+echo "export LESS=' -cR '" >> /home/<username>/.bashrc
+source /home/<username>/.bashrc
+```
+
+## Visual Studio Code
+- Download [.deb package](https://code.visualstudio.com/docs/setup/linux#_install-vs-code-on-linux) Note: The snap store version does not work as well and should not be used. The .deb package must be moved to /tmp so that apt has the proper permissions to install it.
+```bash
+chmod 666 code_1.103.1-1755017277_amd64.deb
+mv code_1.103.1-1755017277_amd64.deb /tmp
+sudo apt install /tmp/code_1.103.1-1755017277_amd64.deb
+```
+
