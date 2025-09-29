@@ -1,4 +1,6 @@
-# Checking SSD and HDD Drives 
+# Hardware Guide
+
+## Checking SSD and HDD Drives 
 Install smartmontools:
 ```bash
 sudo apt install smartmontools
@@ -35,7 +37,7 @@ sudo smartctl -a /dev/sdX
 - Available_Spare: >=10%
 - Percentage_Lifetime_Remaining: >=10%
 
-# Checking RAM
+## Checking RAM
 You can use the `dmidecode` command to output information on your RAM.
 ```bash
 sudo dmidecode -t memory
@@ -45,5 +47,21 @@ For each Memory Device it will list:
 - Size: in MB
 - Speed: in MHz
 - Serial Number: useful for looking up CAS on web
+The only other way to find the CAS Latency is to read it off of the label on the chip or to look it up in BIOS.  
 
-The only other way to find the CAS Latency is to read it off of the label on the chip or to look it up in BIOS.
+## Installing Graphics Cards
+```bash
+lspci -k | grep -EA3 'VGA|3D|Display' # Show installed GPU's
+sudo ubuntu-drivers autoinstall # or use: Software & Updates > Additional Drivers
+lspci | grep -i vga
+lspci -v | grep -i vga
+sudo lshw -C display
+```
+
+## Check Ethernet Card Speed
+```bash
+# Locate the name of your graphics cards, like 'eno1'
+ifconfig
+# Show info on card Speed and Duplex
+ethtool eno1
+```

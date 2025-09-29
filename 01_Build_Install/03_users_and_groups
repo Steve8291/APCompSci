@@ -1,0 +1,22 @@
+# Users and Groups
+
+## Changing User Name and Password  
+```bash
+sudo -i  # Must be logged in as different user than one you are changing.
+usermod -l new_name old_name # Rename the user
+usermod -d /home/new_name -m new_name # Move the home dir to the new username
+grep -E "old_namme|new_name" /etc/passwd # Check users and groups
+ls -la /home/new_name # Check permissions for new user
+reboot
+```
+
+## Changing User Password
+```bash
+sudo passwd [username]
+```
+
+## Create User and Add to sudo Group
+```bash
+sudo adduser NEWUSERNAME
+sudo usermod -aG sudo NEWUSERNAME
+```
