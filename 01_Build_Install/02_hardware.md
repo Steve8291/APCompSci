@@ -60,6 +60,7 @@ sudo lshw -C display
 
 ## Check Ethernet Card Speed
 ```bash
+sudo apt install net-tools
 # Locate the name of your graphics cards, like 'eno1'
 ifconfig
 # Show info on card Speed and Duplex
