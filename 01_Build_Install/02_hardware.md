@@ -51,11 +51,12 @@ The only other way to find the CAS Latency is to read it off of the label on the
 
 ## Installing Graphics Cards
 ```bash
+sudo lshw -C display # Show info on GPU's
 lspci -k | grep -EA3 'VGA|3D|Display' # Show installed GPU's
 sudo ubuntu-drivers autoinstall # or use: Software & Updates > Additional Drivers
 lspci | grep -i vga
 lspci -v | grep -i vga
-sudo lshw -C display
+
 ```
 
 ## Check Ethernet Card Speed

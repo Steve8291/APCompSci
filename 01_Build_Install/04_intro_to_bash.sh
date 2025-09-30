@@ -5,10 +5,25 @@
 echo "Hello World!" # This line should print something!
 
 # Bash Scripting
+Intro to command line
+Filesystem Basics (Think like a filesystem)
+File types and permissions
+ls , cd , cat , file , du , find , grep , man , sort , uniq , less , nano , touch
 
 # Talk about the command prompt '$' regular user, '#' root
-
+file 
+ssh -p <port_number> <username>@<ip_address>
 date
+
+
+
+ find /path/to/search -name "filename.txt"
+ find /path/to/search -name "*.log" 
+ find /path/to/search -iname "report.pdf"
+ find /path/to/search -type f # regular files
+ find /path/to/search -type d # directories
+
+
 
 pwd
 
