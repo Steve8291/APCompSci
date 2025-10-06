@@ -64,3 +64,8 @@ mv code_1.103.1-1755017277_amd64.deb /tmp
 sudo apt install /tmp/code_1.103.1-1755017277_amd64.deb
 ```
 
+## Install & Configure git
+```bash
+sudo apt install git
+git config --global user.name "Your Git UserName"
+git config --global user.email "Your Git Email"
