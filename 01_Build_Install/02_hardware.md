@@ -67,3 +67,16 @@ ifconfig
 # Show info on card Speed and Duplex
 ethtool eno1
 ```
+
+## Check Graphics Card Performance
+Higher score is better.. 92  
+```bash
+sudo apt install glmark2
+glmark2 --fullscreen -show-all-options
+```
+
+## Secure Disk Wipe (Mac)
+```bash
+diskutil list
+diskutil secureerase 0 /dev/diskX
+```
