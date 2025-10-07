@@ -75,6 +75,13 @@ sudo apt install glmark2
 glmark2 --fullscreen -show-all-options
 ```
 
+## Secure Disk Wipe (Linux)
+Note: Never Secure Wipe an SSD.  
+```bash
+sudo fdisk -l
+sudo shred -vfz -n 1 /dev/sdX  # One pass shred and then overwrite with zeros on second pass.
+```
+
 ## Secure Disk Wipe (Mac)
 ```bash
 diskutil list
