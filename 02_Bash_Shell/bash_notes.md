@@ -21,7 +21,7 @@ ls .. # lists the content of the parent directory
 ls . # lists the content of the current directory
 ```
 
-## Redirects (> >>) and Pipes (|)
+## Redirects `>` `>>` and Pipes `|`
 You can use a redirect to send the output of any command to a file.  
 You could even create a long pipeline with multiple commands and then redirect the final output to a file. For example you could use grep to find all matches, pipe to sort and then redirect to a file.  
 
@@ -76,7 +76,41 @@ cd ..  # Takes you up one directory
 cd -  # Takes you back to last directory
 ```
 
+## Relative Paths and Absolute (Full) Paths
+An absolute path is any path that starts with the root directory and goes all the way to your file or directory:  
+```bash
+/home/bilbo/Desktop/my_file.txt
+```
+You can also use a path that is relative to the directory you are in. For example, if you changed into the Desktop directory you could specify the same file like so:  
+```bash
+my_file.txt
+./my_file.txt
+../file_in_bilbo_dir.txt
+```
+The second method that uses the `./` specifies the directory you are currently in and then the file name. This is useful when you are trying to run an executable file like `./my_script.sh`  
+The third method uses the `../` to specify a file that is sitting in the directory above the one you are currently in. In this case the `bilbo` dir since you are in the `Desktop` dir.  
+
+When files get named poorly as in the case with a filename that starts with a `-` you will need to use the absolute path name or `./` to reference the file.  
+
+If a file name has spaces in it you must either enclose the entire path in quotes or escape all the spaces.  
+The second example shows using the `\` to escape spaces:  
+```bash
+"/home/bilbo/Desktop/poorly named file.txt"
+/home/bilbo/Desktop/poorly\ named\ file.txt
+```
+
 ## mv
+Used to move or rename files and directories.  
+To move a file or directory:  
+```bash
+mv /path/to/source/file.txt /path/to/destination/
+mv /home/bilbo/Desktop/my_file.txt /tmp/  # Would move my_file.txt to /tmp/my_file.txt
+```
+To rename a file or directory:  
+```bash
+mv my_file.txt new_name.txt  # Note: this assumes you are inside of the directory containing the file.
+mv my_file.txt /tmp/new_name.txt  # Would rename and move the file to /tmp/
+```
 
 ## rm
 
