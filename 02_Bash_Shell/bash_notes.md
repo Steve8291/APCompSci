@@ -113,6 +113,12 @@ mv my_file.txt /tmp/new_name.txt  # Would rename and move the file to /tmp/
 ```
 
 ## rm
+This command will remove files and directories. Be careful, there is no undo!  
+```bash
+rm filename.txt  # Delete a file
+rm file1.txt file2.txt file3.txt  # Delete multiple files
+rm -r my_directory/  # Deletes an entire directory (-r is recursive)
+```
 
 ## file
 
