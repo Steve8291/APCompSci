@@ -11,6 +11,8 @@
 
 - Insert jump drive, enter boot menu and install Ubuntu
 
+Note: If you need to change the boot order in BIOS to make the usb drive first choose the "USB-HDD" option
+
 Note: if the computer fails to boot the next time you poweroff it might have reverted back to Legacy mode in the BIOS. This is likely due to a dead CMOS battery on the motherboard. A good battery will test >= 2.8V
 
 # Ubuntu Noble Numbat 24.04 Notes

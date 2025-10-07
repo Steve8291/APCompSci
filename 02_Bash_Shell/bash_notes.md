@@ -121,12 +121,28 @@ rm -r my_directory/  # Deletes an entire directory (-r is recursive)
 ```
 
 ## file
-
+Tells you the type of a file like ASCII text or Binary. Useful because file extensions do not determine file type in linux.  
+```bash
+file filename.txt  # Prints the type of file.
+file *  # Lists the file types of all files in the current directory.
+```
 ## sort
+Sorts the contents of a file and prints the sorted output.  
+```bash
+sort filename.txt     # Sorts alphanumerically
+sort -r filename.txt  # Sorts in reverse
+sort -u filename.txt  # Suppresses duplicate lines
+sort -k 2 data.csv    # Sort spreadsheet data by the second field
+```
 
 ## man
 
 ## uniq
+Detects duplicate lines in a file. The lines must be right next to each other. It is often best to pipe from `sort` to `uniq`.  
+```bash
+uniq filename.txt  # Prints all lines except duplicates.
+uniq input.txt output.txt  # Removes duplicate lines and saves as new file "output.txt"
+sort filename.txt | uniq  # The safest way to use uniq is to pipe sorted output to it.
 
 ## less
 
