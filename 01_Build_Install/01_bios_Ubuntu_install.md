@@ -59,7 +59,6 @@ source /home/<username>/.bashrc
 ```
 
 ## Visual Studio Code
-- Download [.deb package](https://code.visualstudio.com/docs/setup/linux#_install-vs-code-on-linux) Note: The snap store version does not work as well and should not be used. The .deb package must be moved to /tmp so that apt has the proper permissions to install it.
 ```bash
 wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
 sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
