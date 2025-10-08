@@ -143,8 +143,8 @@ man ls  # Opens the man page for the command "ls"
 - `/search_term` Type `/` to search the page.
     - `n` or `enter` Jumps to the next search match.
     - `N` Jump to the previous search match.
-- `G` Jump back to the beginning of the page.
-- `g` Jump to the end of the page.
+- `g` Jump back to the beginning of the page.
+- `G` Jump to the end of the page.
 - `q` Exit the man page.
 
 ## uniq
@@ -163,8 +163,8 @@ less textfile.txt
 - `/search_term` Type `/` to search the page.
     - `n` or `enter` Jumps to the next search match.
     - `N` Jump to the previous search match.
-- `G` Jump back to the beginning of the page.
-- `g` Jump to the end of the page.
+- `g` Jump back to the beginning of the page.
+- `G` Jump to the end of the page.
 - `q` Exit the man page.
 
 ## nano
