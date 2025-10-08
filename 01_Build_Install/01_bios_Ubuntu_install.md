@@ -53,9 +53,9 @@ sudo ufw enable
 ## Enable Source Highlighting in `less`
 ```bash
 sudo apt install source-highlight
-echo 'export LESSOPEN="| /usr/share/source-highlight/src-hilite-lesspipe.sh %s"' >> /home/<username>/.bashrc
-echo "export LESS=' -cR '" >> /home/<username>/.bashrc
-source /home/<username>/.bashrc
+echo 'export LESSOPEN="| /usr/share/source-highlight/src-hilite-lesspipe.sh %s"' >> ~/.bashrc
+echo "export LESS=' -cR '" >> ~/.bashrc
+source ~/.bashrc
 ```
 
 ## Visual Studio Code
