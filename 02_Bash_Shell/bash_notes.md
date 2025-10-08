@@ -51,7 +51,6 @@ cat readme.txt # prints the contents of readme.txt to screen
 cat readme.txt > newfile.txt # Copies the contents of one file into another.
 ```
 
-
 ## pwd
 Simple command to print the path to the present working directory.  
 ```bash
@@ -126,6 +125,7 @@ Tells you the type of a file like ASCII text or Binary. Useful because file exte
 file filename.txt  # Prints the type of file.
 file *  # Lists the file types of all files in the current directory.
 ```
+
 ## sort
 Sorts the contents of a file and prints the sorted output.  
 ```bash
@@ -136,6 +136,16 @@ sort -k 2 data.csv    # Sort spreadsheet data by the second field
 ```
 
 ## man
+Used to display the manual pages (man pages) for commands.  
+```bash
+man ls  # Opens the man page for the command "ls"
+```
+- `/search_term` Type `/` to search the page.
+    - `n` or `enter` Jumps to the next search match.
+    - `N` Jump to the previous search match.
+- `G` Jump back to the beginning of the page.
+- `g` Jump to the end of the page.
+- `q` Exit the man page.
 
 ## uniq
 Detects duplicate lines in a file. The lines must be right next to each other. It is often best to pipe from `sort` to `uniq`.  
@@ -143,8 +153,29 @@ Detects duplicate lines in a file. The lines must be right next to each other. I
 uniq filename.txt  # Prints all lines except duplicates.
 uniq input.txt output.txt  # Removes duplicate lines and saves as new file "output.txt"
 sort filename.txt | uniq  # The safest way to use uniq is to pipe sorted output to it.
+```
 
 ## less
+Used to read text files. Does not allow you to edit the file. This is the same pager that opens with a man page so the commands are similar.  
+```bash
+less textfile.txt
+```
+- `/search_term` Type `/` to search the page.
+    - `n` or `enter` Jumps to the next search match.
+    - `N` Jump to the previous search match.
+- `G` Jump back to the beginning of the page.
+- `g` Jump to the end of the page.
+- `q` Exit the man page.
 
 ## nano
-
+Command line text editor.  
+```bash
+nano filename.txt  # Creates filename.txt if it doesn't exist and opens it.
+```
+- `Ctrl+K` Cuts a line.
+- `Ctrl+U` Pastes a line.
+- `Ctrl+O` Saves file.
+- `Ctrl+X` Exits with option to save.
+- `Ctrl+W` Search file for term.
+    - `Alt+W` Find the next match for search.
+- `Alt+T` Cuts all text from the cursor to end of file. Can be used to clear the file if you do it on the first line of the file.
