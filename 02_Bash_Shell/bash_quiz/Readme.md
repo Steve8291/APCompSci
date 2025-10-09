@@ -3,9 +3,9 @@ Be sure to follow each set of instructions exactly. Double check yourself each t
 After creating your answers file it is possible to skip questions that you are unable to answer.  
 Note: You may open this file in VS Code but all steps, including creating your answer file must be done in the terminal not the GUI (Graphical User Interface). You may use your notes as well as the internet if you can't remember how to use a command. Don't forget that there are also man pages.
 
-## Create Answers File
+## Create Answers File & Initialize Quiz
 On your `Desktop` create a file called `your_name_quiz.txt` replacing `your_name` with your actual name. Use underscores when naming your file. Do not use any spaces.
-
+Inside the `bash_quiz` dir you will find a file named `init_quiz.sh`. Execute this script.
 
 
 ## 1) Append a Line
@@ -35,13 +35,16 @@ In one of the quiz directories is a file containing the password `PasswordShmash
 Locate the file that contains this password and append the file's name (not the password) to your answers file.  
 
 ## 6) Find a Hidden File
-Fuzzing-Dicts-Master
+Add a line to your answers file that reads `6)`
+Inside the `Fuzzing-Dicts-master` dir there is a hidden file. append the contents of this file to your answers file.
 
 ## 7) Case-insensitive Search
-
+Add a line to your answers file that reads `7)`
+One of the files inside of `Fuzzing-Dicts-master` contains a line with the word `therhinoserver` in it. However, some of the letters are upper and some lower case. Append this line to your answers file.
 
 ## 8) Search a Filename With Spaces
-
+Add a line to your answers file that reads `8)`
+Inside of the `Fuzzing-Dicts-master` dir is a file called `MySQL-Password (3050) .txt`. Search this file for a line containing `k1ng1` and append this line to your answers file.
 
 ## 6) Run The Grading Script
-Call me over when you are finished and I will show you where the script is.  
+If you are not already there, change back to the `bash_quiz` dir. Then execute the script named `grade_quiz.sh`. Call me over when you are finished.
