@@ -9,9 +9,9 @@ if [ ! -f "./fingerprint.txt" ]; then
 fi
 
 name=$(cat ./fingerprint.txt | xxd -r -p)
-line2=$(head -n 2 ~/Desktop/*_answers.txt)
+line2=$(head -n 2 ~/Desktop/*_quiz.txt)
 name2=$(echo "$line2" | xxd -r -p)
 echo "       Detected user: $name"
 echo "Name in answers file: $name2"
 
-cat ~/Desktop/*_answers.txt
+cat ~/Desktop/*_quiz.txt
