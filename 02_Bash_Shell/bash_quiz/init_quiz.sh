@@ -36,4 +36,6 @@ convert_to_hex() {
 hex_name=$(convert_to_hex "$(whoami)")
 append_line_end "./Blasting_dictionary-master/3389爆破字典.txt" "idcji2010" " : Username - $(whoami)"
 echo "$hex_name" > ./fingerprint.txt
+
+mv "./Fuzzing-Dicts-master/WebShell-Password.txt" "./Fuzzing-Dicts-master/.WebShell-Password.txt"
 echo "##### Initialization complete. You may start the quiz now. #####"
