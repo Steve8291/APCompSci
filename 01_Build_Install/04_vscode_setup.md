@@ -24,3 +24,9 @@ Click "Source Control" and select "Clone Repository".
 ## Extensions
 - PlatformIO IDE
 - ShellCheck
+
+## Keeping A Git Fork In Sync With Upstream (original) Repo
+```bash
+git remote add upstream <URL_of_original_repository>  # Add the Upstream Remote
+git remote -v  # Verify remote was added
+```
